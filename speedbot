@@ -1,0 +1,201 @@
+import urllib, urllib2, cookielib, re
+def customIn():
+    login_url = "https://minecraft.net/login"
+    cookie = cookielib.CookieJar()
+    opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
+    respon = opener.open(login_url).read()
+    n_url = "https://minecraft.net/login"
+    ie = cookielib.CookieJar()
+    er = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
+    on = opener.open(login_url).read()
+
+    authToken = re.search('name="authenticityToken"[\s]+value="(.+)"', respon).group(1)
+
+    data_dict = {
+        "username": "USERNAME",
+        "password": "PASSWORD",
+        "remember": "true",
+        "authenticityToken": authToken
+    }        
+    login = opener.open(login_url, urllib.urlencode(data_dict))
+    logged_in = login.read()
+    
+    if login_url in logged_in:
+        print ("Login failed")
+    else:
+        print ("Login OK")
+def locateAlts():
+    ()
+    
+def locateServer():
+    
+    import os
+    import socket
+    import subprocess
+
+
+    s = socket.socket()
+    host = (botServer)
+    port = (botPort)
+    s.connect((host, port))
+    ()
+def logonBots():
+    ()
+def spamText():
+    ()
+    
+def stayIdle():
+    ()
+    
+def retryLogon():
+    ()
+def connect(botServer, botPort, username):
+    ()
+def username():
+    username = username ()
+    
+
+
+
+
+print("Useful Info:")
+print("Default Port = 25565")
+print("Numbered IP can be obtained by opening command prompt and using the 'ping' command on the lettered ip. eg. ping(insertiphere).net")
+print("------------------------------------------------------------------------------------")
+print("iKonjas Speed/Python Based Bot")
+print("Leak Forums = iKonja")
+print("Minecraft = personuhpoizon")
+print("Site = http://www.imxprs.com/free/personuhpoizon/snowycoast")
+print("-----------------------------------------------------------")
+print("Insert Server IP")
+botServer = raw_input ("Server IP:")
+print(botServer)
+botPort = raw_input ("Server Port:")
+print(botPort)
+print("Warning - DO NOT do any option other than 1, 2, 3, 4.")
+print("Chose")
+print("1 = Retry Login")
+print("2 = Spam")
+print("3 = Stay")
+print("4 = Custom/Controlled")
+optionVariable = raw_input("Option:")
+
+if (optionVariable == "2"):
+    oneSpam = raw_input("Spam Text:")
+    print("Spamming Server:")
+    print(botServer)
+    print("Text being practiced:")
+    print(oneSpam)
+    print("Warnings: 0")
+    print("Cautions: 0")
+    print("Commence!")
+    print("Type 'end' to stop/finish the process.")
+    endTwo = raw_input("Type 'end' to stop/finish/kill the process:")
+    if (endTwo == "end"):
+        print("ending Program..")
+        print("Warning: ending program. Cause: variable endOne == end")
+
+if (optionVariable == "1"):
+    print("Logging in multiple times to the server:")
+    print(botServer)
+    print("Text being practiced:")
+    print("Invalid... None.")
+    print("Warnings: 0")
+    print("Cautions: 1")
+    print("Commence!")
+    print("Type 'end' to stop/finish the process.")
+    endOne = raw_input("Type 'end' to stop/finish/kill the process:")
+    if (endOne == "end"):
+        print("ending Program..")
+        print("Warning: ending program. Cause: variable endOne == end")
+
+if (optionVariable == "3"):
+    print("Logging in to server:")
+    print(botServer)
+    print("Text being practiced:")
+    print("Invalid... None")
+    print("Caution: The bots are practicing no action after they have logged on to...")
+    print(botServer)
+    print("Warnings: 0")
+    print("Cautions: 2")
+    print("Commence!")
+    print("Type 'end' to stop/finish the process.")
+    endThree = raw_input("Type 'end' to stop/finish/kill the process:")
+    if (endThree == "end"):
+        print("ending Program..")
+        print("Warning: ending program. Cause: variable endOne == end")
+
+if (optionVariable == "4"):
+    print("Caution: Custom Mode")
+    print(botServer)
+    print(botPort)
+    print("Ready")
+    print("Victim...")
+    print(botServer)
+    print("Warnings: 0")
+    print("Cautions: 1")
+    print("Command List:")
+    print("Log on a bot: \-botOn")
+    print("Insert Text: \-spamText")
+    print("Log Off: \-botOff")
+    print("Log On With Socks Proxy: \-socksLog (WIP)")
+    customCommand = raw_input("python/speedbot:")
+    if (customCommand == "\-botOn"):
+        print("Enter Username And Password to the Account you wish to Log On to...")
+        print(botServer)
+        username = raw_input("Username/Email:")
+        print(username)
+        USERNAME = raw_input("Confirm:")
+        print(USERNAME)
+        password = raw_input("Password/Passcode:")
+        print(password)
+        PASSWORD = raw_input("Confirm:")
+        print(PASSWORD)
+        login_url = "https://minecraft.net/login"
+    cookie = cookielib.CookieJar()
+    opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
+    respon = opener.open(login_url).read()
+    n_url = "https://minecraft.net/login"
+    ie = cookielib.CookieJar()
+    er = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
+    on = opener.open(login_url).read()
+
+    authToken = re.search('name="authenticityToken"[\s]+value="(.+)"', respon).group(1)
+
+    data_dict = {
+        username: USERNAME,
+        password: PASSWORD,
+        "remember": "true",
+        "authenticityToken": authToken
+    }        
+    login = opener.open(login_url, urllib.urlencode(data_dict))
+    logged_in = login.read()
+    
+    if login_url in logged_in:
+        print ("Login failed")
+    else:
+        print ("Login OK")
+        print("logged on '1' username")
+        print("victim...")
+        print(botServer)
+        customCommand = raw_input("python/speedbot:")
+        if (customCommand == "\-spamText"):
+            spamTextCustom = raw_input("input text:")
+            print(spamTextCustom)
+            print("Victim:")
+            print(botServer)
+            print("spamming with text...")
+            print(spamTextCustom)
+            print("Commence!")
+        
+               
+
+else:
+    print("Incorrect Format... Restart Program!")
+    print("No option.... Kill Program!")
+    print("Text being practiced:")
+    print("Invalid... None")
+    print("Caution: The bots are practicing no action after they have logged on...")
+    print("Caution: No 'botServer' variable!")
+    print("Warnings: 2")
+    print("Cautions: 3")
